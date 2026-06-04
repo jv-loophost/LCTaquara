@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lions Clube Taquara</title>
+<meta name="description" content="Espaço dos sócios do Lions Clube Taquara — informações do clube, diretoria, contatos e calendário leonístico.">
+<link rel="icon" href="assets/lions-emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span id="tb-left"></span>
+  <span class="links" id="tb-right"></span>
+</div></div>
+
+<header class="site-header"><div class="wrap">
+  <img class="emblem" src="assets/lions-emblem.png" alt="Emblema Lions Clubs International">
+  <div class="titles">
+    <h1 id="h-clube">Lions Clube Taquara</h1>
+    <p class="city" id="h-cidade"></p>
+  </div>
+  <div class="al-area">
+    <span class="al-badge" id="h-al"></span>
+    <select class="al-select" id="al-select" hidden></select>
+  </div>
+</div></header>
+
+<div id="hero-slot"></div>
+
+<main id="content">
+  <p class="loading">Carregando informações do clube…</p>
+</main>
+
+<footer class="site-footer"><div class="wrap">
+  <span class="motto" id="f-motto"></span>
+  <span class="fnav" id="f-nav"></span>
+</div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="card">
+    <span class="ico chip" id="m-ico"></span>
+    <h3 id="m-title"></h3>
+    <p class="when" id="m-when"></p>
+    <p class="det" id="m-det"></p>
+    <p class="resp" id="m-resp"></p>
+    <div class="actions">
+      <a class="open-link" id="m-link" target="_blank" rel="noopener" hidden>Abrir link <i class="ti ti-external-link"></i></a>
+      <button class="close" id="m-close">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
