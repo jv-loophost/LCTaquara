@@ -99,7 +99,7 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
 .copy{margin-left:10px;font-size:12px;border:1px solid var(--lions-blue);background:#fff;
   color:var(--lions-blue);border-radius:7px;padding:3px 9px;cursor:pointer}
 
-/* ---------- aniversários ---------- */
+/* ---------- aniversários (seção standalone – mantida por compatibilidade) ---------- */
 .bday-month{margin:14px 0 4px;font-weight:600;color:var(--lions-blue)}
 .bday-list{list-style:none;margin:0 0 6px;padding:0;display:grid;
   grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px 18px}
@@ -128,6 +128,8 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
 .chip.evento{background:var(--blue-soft);color:var(--lions-blue-dark)}
 .chip.reuniao{background:#eceef3;color:#56606f}
 .chip.comemorativa{background:#fae9e1;color:#9a3c1c}
+.chip.aniv-nascimento{background:#fce7f3;color:#9d1d5e}
+.chip.aniv-casamento{background:#fef3c7;color:#92400e}
 .cal-body{padding:8px 24px 26px}
 .cal-month{display:flex;align-items:baseline;gap:9px;margin:20px 0 10px;scroll-margin-top:64px}
 .cal-month:first-child{margin-top:10px}
@@ -146,6 +148,15 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
 .act .body .meta .more{color:var(--lions-blue);font-weight:600}
 .empty{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:14px;
   border:1px dashed var(--line);border-radius:11px;padding:12px 14px;margin-bottom:9px}
+
+/* ---------- aniversários dentro do calendário ---------- */
+.cal-aniv{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)}
+.cal-aniv-sep{font-size:12px;font-weight:600;color:var(--muted);margin:0 0 7px;
+  display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.06em}
+.cal-aniv-sep i{font-size:13px}
+.cal-aniv-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.cal-aniv-list li{display:flex;align-items:center;gap:9px;font-size:14px}
+.cal-aniv-list .d{font-weight:600;color:var(--lions-blue);min-width:42px;font-size:13px}
 
 /* ---------- modal ---------- */
 .modal{position:fixed;inset:0;background:rgba(8,16,40,.55);display:none;
