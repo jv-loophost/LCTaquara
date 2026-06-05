@@ -20,6 +20,7 @@ estatuto_url: content/AL26-27/estatuto.pdf
 # Cada linha:  arquivo | título | ícone | modo
 #
 #   modo = markdown      -> texto livre (negrito, listas, links, tabelas)
+#   modo = presidente    -> lema do AL em destaque + carta do presidente
 #   modo = financeiro    -> mostra o PIX atrás de um botão
 #   modo = aniversarios  -> lido pelo calendário e exibido mês a mês
 #   modo = campanhas     -> calendário leonístico (inclui aniversários automaticamente)
@@ -32,13 +33,14 @@ estatuto_url: content/AL26-27/estatuto.pdf
 # ----------------------------------------------------------------------
 
 ## Seções
-fotos.md        | (banner)               | photo          | banner
-clube.md        | Informações do clube   | map-pin        | markdown
-diretoria.md    | Diretoria              | users          | markdown
-comites.md      | Comitês                | clipboard-list | markdown
-comissoes.md    | Comissões              | checklist      | markdown
-contatos.md     | Contatos               | mail           | markdown
-links.md        | Links úteis            | external-link  | markdown
-financeiro.md   | Financeiro             | cash           | financeiro
-aniversarios.md | Aniversários           | cake           | aniversarios
-campanhas.md    | Calendário leonístico  | calendar-star  | campanhas
+fotos.md               | (banner)               | photo          | banner
+palavra-presidente.md  | Palavra do Presidente  | quote          | presidente
+clube.md               | Informações do clube   | map-pin        | markdown
+diretoria.md           | Diretoria              | users          | markdown
+comites.md             | Comitês                | clipboard-list | markdown
+comissoes.md           | Comissões              | checklist      | markdown
+contatos.md            | Contatos               | mail           | markdown
+links.md               | Links úteis            | external-link  | markdown
+financeiro.md          | Financeiro             | cash           | financeiro
+aniversarios.md        | Aniversários           | cake           | aniversarios
+campanhas.md           | Calendário leonístico  | calendar-star  | campanhas
