@@ -23,6 +23,15 @@ function typeKey(t){
   if(t.startsWith("come") || t.startsWith("feria") || t.includes("comemora")) return "comemorativa";
   return "evento";
 }
+function isUrl(s){ return /^https?:\/\//i.test((s||"").trim()); }
+function locHtml(local, full){
+  if(!local) return "";
+  if(isUrl(local)){
+    const label = full ? "On-line — link de acesso" : "On-line";
+    return `<i class="ti ti-video"></i><a href="${esc(local.trim())}" target="_blank" rel="noopener">${label}</a>`;
+  }
+  return `<i class="ti ti-map-pin"></i>${esc(local)}`;
+}
 
 /* ---------- parse config.md ---------- */
 function parseConfig(text){
@@ -205,11 +214,12 @@ function renderCampanhas(title, icon, text, al, anivText){
         const time = a.hora ? `<div class="time">${esc(a.hora)}</div>` : "";
         const more = a.detalhes||a.link ? ` · <span class="more">ver detalhes</span>` : "";
         const resp = a.responsavel ? `resp. ${esc(a.responsavel)}` : (tk==="comemorativa"?"data comemorativa":"");
+        const loc = a.local ? `<p class="loc">${locHtml(a.local)}</p>` : "";
         body += `<div class="act" data-act="${idx}">
           <div class="date"><div class="day">${day}</div>${time}</div>
           <span class="chip ${tk}"><i class="ti ti-${TYPE_ICON[tk]}"></i></span>
           <div class="body"><p class="ttl">${esc(a.titulo||"Atividade")}</p>
-          <p class="meta">${resp}${more}</p></div></div>`;
+          ${loc}<p class="meta">${resp}${more}</p></div></div>`;
       });
       if(bdays.length){
         body += `<div class="cal-aniv"><p class="cal-aniv-sep"><i class="ti ti-cake"></i> Aniversários</p><ul class="cal-aniv-list">`;
@@ -244,6 +254,10 @@ function renderCampanhas(title, icon, text, al, anivText){
   sec.querySelectorAll(".act").forEach(el=>{
     el.addEventListener("click",()=>openModal(ACTS[+el.dataset.act]));
   });
+  // link de local on-line: abre o link sem abrir o popup
+  sec.querySelectorAll(".act .loc a").forEach(a=>{
+    a.addEventListener("click", e=>e.stopPropagation());
+  });
   return sec;
 }
 
@@ -258,6 +272,9 @@ function openModal(a){
   document.getElementById("m-title").textContent = a.titulo||"Atividade";
   const when = [a.data, a.hora].filter(Boolean).join(" · ");
   document.getElementById("m-when").textContent = when;
+  const loc = document.getElementById("m-loc");
+  if(a.local){ loc.innerHTML = locHtml(a.local, true); loc.hidden = false; }
+  else { loc.hidden = true; }
   document.getElementById("m-det").textContent = a.detalhes||"";
   document.getElementById("m-resp").textContent = a.responsavel ? ("Responsável: "+a.responsavel) : "";
   const link = document.getElementById("m-link");
