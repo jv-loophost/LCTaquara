@@ -40,10 +40,12 @@ link:
 
 ## Agosto 2026
 
-tipo: comemorativa
-data: 14/08/2026
-titulo: Dia do Lions Internacional
-detalhes: Publicação nas redes sociais e ação simbólica de serviço.
+tipo: evento
+data: 15/08/2026
+titulo: 1ª RGD
+local: FEEVALE - Novo Hamburgo
+hora: M & T
+detalhes: Manhã e Tarde (integralions). Atividades Lions, LEOs e Leãozinhos.
 link:
 
 ## Setembro 2026
@@ -78,7 +80,7 @@ link:
 ## Outubro 2026
 
 tipo: campanha
-data: 28/11/2026
+data: 28/10/2026
 hora: 00h00
 titulo: Chá das Patronesses
 local:
@@ -87,6 +89,14 @@ detalhes: Vende-se em torno de 32 mesas, cada mesa com 10 participantes, onde a 
 link:
 
 ## Novembro 2026
+
+tipo: evento
+data: 15/08/2026
+titulo: 2ª RGD
+local: Esteio
+hora: M & T
+detalhes: Manhã e Tarde (integralions). Atividades Lions, LEOs e Leãozinhos.
+link:
 
 tipo: campanha
 data: 08/11/2026
@@ -114,9 +124,34 @@ link:
 
 ## Março 2027
 
+tipo: evento
+data: 06 ou 13/03/2027
+titulo: 3ª RGD
+local: Taquara
+hora: M & T
+detalhes: Manhã e Tarde (integralions). Atividades Lions, LEOs e Leãozinhos.
+link:
+
 ## Abril 2027
 
+tipo: evento
+data: 24/04/2027
+titulo: 4ª RGD & 66ª Convenção
+local: Encantado
+hora: M & T
+detalhes:
+link:
+
 ## Maio 2027
+
+tipo: evento
+data: 29/05/2027
+titulo: Lions PUB
+local: Sociedade 5 de Maio
+hora: 20h
+responsavel: CLa. Alessandra Schunck
+detalhes: data a confirmar
+link:
 
 ## Junho 2027
 
