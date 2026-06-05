@@ -31,7 +31,7 @@ LCTaquara/
 │       ├── contatos.md
 │       ├── links.md
 │       ├── financeiro.md   <- PIX (aparece só ao clicar)
-│       ├── aniversarios.md <- só dia/mês, sem o ano
+│       ├── aniversarios.md <- exibidos DENTRO do calendário, mês a mês (veja abaixo)
 │       ├── campanhas.md    <- o calendário leonístico (seção principal)
 │       ├── estatuto.pdf    <- troque pelo estatuto oficial
 │       └── fotos/          <- fotos do banner do topo
@@ -58,6 +58,36 @@ a linha dela na lista de seções. Para criar uma seção nova, crie o arquivo `
 e acrescente uma linha na lista no formato `arquivo | título | ícone | modo`.
 
 Ícones: use os nomes de https://tabler.io/icons (sem o prefixo `ti-`).
+
+---
+
+## Aniversários — onde aparecem e como editar
+
+Os aniversários **não têm mais uma seção separada** na página: eles aparecem
+**dentro do Calendário Leonístico**, no final de cada mês, depois das
+atividades. Cada mês que tiver aniversários ganha uma mini-lista com:
+
+- 🎂 **Nascimentos** (ícone rosa)
+- 💍 **Casamentos** (ícone dourado)
+
+A legenda no topo do calendário identifica os dois tipos, e os botões de
+navegação por mês (Jan, Fev, …) também acendem quando o mês tem aniversário,
+mesmo sem nenhuma atividade programada.
+
+**Para editar, nada mudou:** continue usando o arquivo
+`content/AL26-27/aniversarios.md`, no mesmo formato de sempre:
+
+```
+## Aniversários de nascimento
+12/03 | João da Silva
+
+## Aniversários de casamento
+27/05 | Ana e Pedro
+```
+
+Uma linha por pessoa/casal, no formato `DD/MM | Nome` (sem o ano), embaixo do
+título certo. O calendário lê esse arquivo automaticamente e distribui os
+aniversários nos meses correspondentes.
 
 ---
 
