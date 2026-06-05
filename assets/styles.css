@@ -154,6 +154,10 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
 .act .date .time{font-size:11.5px;color:var(--muted);margin-top:2px}
 .act .body{flex:1;min-width:0}
 .act .body .ttl{font-weight:600;font-size:15.5px;margin:0}
+.act .body .loc{font-size:13px;color:var(--muted);margin:3px 0 0;display:flex;
+  align-items:center;gap:6px;overflow-wrap:anywhere}
+.act .body .loc i{color:var(--lions-blue);font-size:15px;flex:none}
+.act .body .loc a{color:var(--lions-blue);font-weight:600}
 .act .body .meta{font-size:13px;color:var(--muted);margin:2px 0 0}
 .act .body .meta .more{color:var(--lions-blue);font-weight:600}
 .empty{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:14px;
@@ -177,7 +181,11 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
 .modal .ico{width:42px;height:42px;border-radius:11px;display:inline-flex;align-items:center;
   justify-content:center;margin-bottom:12px;font-size:22px}
 .modal h3{font-family:var(--font-display);font-weight:600;font-size:21px;margin:0 0 4px;color:var(--ink)}
-.modal .when{color:var(--lions-blue);font-weight:600;font-size:14px;margin:0 0 12px}
+.modal .when{color:var(--lions-blue);font-weight:600;font-size:14px;margin:0 0 6px}
+.modal .loc{color:#3b4150;font-size:14px;margin:0 0 12px;display:flex;
+  align-items:center;gap:7px;overflow-wrap:anywhere}
+.modal .loc i{color:var(--lions-blue);font-size:16px;flex:none}
+.modal .loc a{color:var(--lions-blue);font-weight:600}
 .modal .det{color:#3b4150;font-size:15px;margin:0 0 6px}
 .modal .resp{color:var(--muted);font-size:13.5px;margin:10px 0 0}
 .modal .actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
