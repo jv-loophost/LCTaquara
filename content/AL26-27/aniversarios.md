@@ -74,7 +74,6 @@
 05/09 | Alessandra e Jonas Reis
 08/09 | Marilena e Paulo Streit
 19/09 | Laura e Diovani
-20/09 | Tiane e Thiago
 14/10 | Alessandra e Vinicius
 23/10 | Edna e Carlos Fabiano
 07/11 | Patricia e Tiago
