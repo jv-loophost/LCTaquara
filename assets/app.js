@@ -69,6 +69,22 @@ function renderMarkdown(title, icon, text){
   return sectionShell(title, icon, html);
 }
 
+function renderPresidente(title, icon, text){
+  let lema = ""; const body = [];
+  text.split("\n").forEach(raw=>{
+    const t = raw.trim();
+    if(t.startsWith("#")) return; // comentários do arquivo
+    const m = /^lema\s*:\s*(.+)$/i.exec(t);
+    if(m && !lema){ lema = m[1].trim(); return; }
+    body.push(raw);
+  });
+  let inner = "";
+  if(lema) inner += `<p class="pres-lema"><i class="ti ti-quote"></i>${esc(lema)}</p>`;
+  const letter = body.join("\n").trim();
+  inner += window.marked ? marked.parse(letter) : esc(letter);
+  return sectionShell(title, icon, inner);
+}
+
 function renderFinanceiro(title, icon, text){
   const kv = {};
   text.split("\n").forEach(l=>{ const i=l.indexOf(":");
@@ -339,7 +355,8 @@ async function main(){
     if(s.mode === "banner"){ buildHero(s.text, al, kv); continue; }
     if(s.mode === "aniversarios") continue; // exibido dentro do calendário
     let node;
-    if(s.mode === "financeiro") node = renderFinanceiro(s.title, s.icon, s.text);
+    if(s.mode === "presidente") node = renderPresidente(s.title, s.icon, s.text);
+    else if(s.mode === "financeiro") node = renderFinanceiro(s.title, s.icon, s.text);
     else if(s.mode === "campanhas") node = renderCampanhas(s.title, s.icon, s.text, al, anivText);
     else node = renderMarkdown(s.title, s.icon, s.text);
     content.appendChild(node);
