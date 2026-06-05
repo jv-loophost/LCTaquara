@@ -58,7 +58,7 @@ detalhes: Manhã e Tarde (integralions). Atividades Lions, LEOs e Leãozinhos.
 link:
 
 tipo: evento
-data: 29/08/2026
+data: 22/08/2026
 titulo: Homens na Cozinha - APAE
 local: Barracão da Igreja Católica
 hora: 20h
