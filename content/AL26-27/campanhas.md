@@ -25,7 +25,7 @@ data: 07/07/2026
 hora: 19h30
 titulo: Posse da diretoria AL 26/27
 local: Sociedade 5 de Maio
-responsavel: Diretoria
+responsavel: Presidente
 detalhes: Jantar de posse com transmissão do cargo.
 link:
 
@@ -40,6 +40,15 @@ link:
 
 ## Agosto 2026
 
+tipo: reuniao
+data: 04/08/2026
+hora: 19h30
+titulo: Reunião Festiva Dia dos Pais
+local: Sociedade 5 de Maio
+responsavel: Vice-presidente CL Diovani 
+detalhes: Jantar especial PAIS + FILHOS
+link:
+
 tipo: evento
 data: 15/08/2026
 titulo: 1ª RGD
@@ -48,36 +57,64 @@ hora: M & T
 detalhes: Manhã e Tarde (integralions). Atividades Lions, LEOs e Leãozinhos.
 link:
 
+tipo: evento
+data: 29/08/2026
+titulo: Homens na Cozinha - APAE
+local: Barracão da Igreja Católica
+hora: 20h
+responsavel: Comissão Lions Chef (Tiago Trevisani)
+detalhes: 
+link:
+
+
 ## Setembro 2026
 
-tipo: campanha
-data: 06/09/2026
-hora: 09h
-titulo: Campanha da Visão
-local: Praça central
-responsavel: Maria L.
-detalhes: Arrecadação de óculos usados. Parceria com óptica local. Voluntários às 8h para montagem.
-link:
-
-tipo: evento
-data: 20/09/2026
-hora: 20h
-titulo: Jantar beneficente
-local: Salão paroquial
-responsavel: Carlos M.
-detalhes: Ingressos R$ 50. Renda para a campanha de inverno.
-link:
-
 tipo: reuniao
-data: 23/09/2026
+data: 01/09/2026
 hora: 19h30
-titulo: Reunião ordinária
-local:
-responsavel: Presidência
-detalhes: Balanço da Campanha da Visão e prestação de contas do mês.
+titulo: Reunião Ordinária
+local: Sociedade 5 de Maio
+responsavel: Presidente
+detalhes: 
+link:
+
+tipo: campanha
+data: 10/2026
+hora: 00h00
+titulo: Cartaz da Paz
+local: 
+responsavel: -- a definir --
+detalhes: 
+link:
+
+tipo: campanha
+data: 09/2026
+hora: 00h00
+titulo: Feira da Saúde
+local: 
+responsavel: -- a definir --
+detalhes: 
 link:
 
 ## Outubro 2026
+
+tipo: reuniao
+data: 06/10/2026
+hora: 19h30
+titulo: Reunião Ordinária
+local: Sociedade 5 de Maio
+responsavel: Presidente
+detalhes: 
+link:
+
+tipo: campanha
+data: 18/10/2026
+hora: 8h00
+titulo: Pernanda Esportiva
+local: Campo Taquarense
+responsavel: CL Telmo
+detalhes: 
+link:
 
 tipo: campanha
 data: 28/10/2026
@@ -89,6 +126,16 @@ detalhes: Vende-se em torno de 32 mesas, cada mesa com 10 participantes, onde a 
 link:
 
 ## Novembro 2026
+
+tipo: reuniao
+data: 03/11/2026
+hora: 19h30
+titulo: Reunião Ordinária
+local: Sociedade 5 de Maio
+responsavel: Presidente
+detalhes: Tratar sobre NATAL SOLIDÁRIO
+link:
+
 
 tipo: evento
 data: 15/08/2026
@@ -110,12 +157,21 @@ link:
 ## Dezembro 2026
 
 tipo: evento
-data: 13/12/2026
+data: 01/12/2026
 hora: 19h
 titulo: Confraternização de fim de ano
-local:
-responsavel: Comissão de eventos
+local: -- a definir --
+responsavel: Diretoria
 detalhes: Jantar de confraternização dos sócios e familiares.
+link:
+
+tipo: campanha
+data: 12/2026
+hora: 8h00
+titulo: Natal Solidário
+local: -- a definir --
+responsavel: 
+detalhes: 
 link:
 
 ## Janeiro 2027
@@ -123,6 +179,15 @@ link:
 ## Fevereiro 2027
 
 ## Março 2027
+
+tipo: reuniao
+data: 02/03/2027
+hora: 19h30
+titulo: Reunião Ordinária
+local: Sociedade 5 de Maio
+responsavel: Presidente
+detalhes: 
+link:
 
 tipo: evento
 data: 06 ou 13/03/2027
@@ -134,6 +199,15 @@ link:
 
 ## Abril 2027
 
+tipo: reuniao
+data: 06/04/2027
+hora: 19h30
+titulo: Reunião Ordinária
+local: Sociedade 5 de Maio
+responsavel: Presidente
+detalhes: 
+link:
+
 tipo: evento
 data: 24/04/2027
 titulo: 4ª RGD & 66ª Convenção
@@ -143,6 +217,15 @@ detalhes:
 link:
 
 ## Maio 2027
+
+tipo: reuniao
+data: 04/05/2026
+hora: 19h30
+titulo: Reunião Festiva Dia das Mães
+local: Sociedade 5 de Maio
+responsavel: Presidente
+detalhes: Jantar Especial MÃES e FILHOS
+link:
 
 tipo: evento
 data: 29/05/2027
@@ -156,10 +239,11 @@ link:
 ## Junho 2027
 
 tipo: reuniao
-data: 24/06/2027
-hora: 20h
-titulo: Reunião de encerramento do AL
-local:
-responsavel: Presidência
-detalhes: Prestação de contas e preparação da transição para o próximo Ano Leonístico.
+data: 01/06/2027
+hora: 19h30
+titulo: Reunião Ordinária
+local: Sociedade 5 de Maio
+responsavel: Presidente
+detalhes: 
 link:
+
