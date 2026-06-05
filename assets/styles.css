@@ -131,11 +131,13 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
 .chip.aniv-nascimento{background:#fce7f3;color:#9d1d5e}
 .chip.aniv-casamento{background:#fef3c7;color:#92400e}
 .cal-body{padding:8px 24px 26px}
-.cal-month{display:flex;align-items:baseline;gap:9px;margin:20px 0 10px;scroll-margin-top:64px}
-.cal-month:first-child{margin-top:10px}
-.cal-month h3{font-family:var(--font-display);font-weight:600;font-size:18px;margin:0;color:var(--lions-blue)}
+.cal-month{display:flex;align-items:center;justify-content:space-between;gap:9px;
+  margin:26px 0 12px;padding:10px 16px;background:var(--blue-soft);
+  border-left:4px solid var(--lions-gold);border-radius:10px;scroll-margin-top:64px}
+.cal-month:first-child{margin-top:12px}
+.cal-month h3{font-family:var(--font-display);font-weight:600;font-size:18px;margin:0;color:var(--lions-blue-dark)}
 .cal-month .count{font-size:11.5px;background:var(--lions-gold);color:var(--gold-text);
-  padding:2px 9px;border-radius:999px;font-weight:600}
+  padding:2px 9px;border-radius:999px;font-weight:600;white-space:nowrap}
 .act{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:11px;
   padding:12px 14px;margin-bottom:9px;cursor:pointer;transition:border-color .15s,background .15s}
 .act:hover{border-color:var(--lions-blue);background:#fbfcff}
