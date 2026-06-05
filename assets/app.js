@@ -14,7 +14,7 @@ async function fetchText(path){
   try{ const r = await fetch(path, {cache:"no-store"}); if(!r.ok) return null; return await r.text(); }
   catch(e){ return null; }
 }
-function norm(s){ return (s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim(); }
+function norm(s){ return (s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().trim(); }
 function esc(s){ return (s||"").replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 function typeKey(t){
   t = norm(t);
@@ -118,7 +118,7 @@ function renderAniversarios(title, icon, text){
 }
 
 let ACTS = [];   // guarda atividades para o modal
-function renderCampanhas(title, icon, text, al){
+function renderCampanhas(title, icon, text, al, anivText){
   const months = monthsForAL(al);
   const byLabel = {};
   // parse: seções por "## Mês Ano", blocos separados por linha em branco
@@ -144,9 +144,24 @@ function renderCampanhas(title, icon, text, al){
   });
   flush();
 
+  // parse aniversários por índice de mês (0–11)
+  const anivByMonth = {};
+  if(anivText){
+    let cat = "nascimento";
+    anivText.split("\n").forEach(raw=>{
+      const t = raw.trim();
+      if(t.startsWith("##")){ cat = norm(t).includes("casamento") ? "casamento" : "nascimento"; return; }
+      if(t.startsWith("#") || t==="") return;
+      const m = /^(\d{1,2})\/(\d{1,2})\s*\|\s*(.+)$/.exec(t);
+      if(m){ const mo = +m[2]-1; (anivByMonth[mo] = anivByMonth[mo]||[]).push({d:+m[1], mo, name:m[3].trim(), cat}); }
+    });
+    Object.values(anivByMonth).forEach(arr=>arr.sort((a,b)=>a.d-b.d));
+  }
+
   const navBtns = months.map(m=>{
     const list = byLabel[norm(m.label)]||[];
-    return `<button class="${list.length?"has":""}" data-go="mes-${m.year}-${m.mi}">${MONTH_ABBR[m.mi]}</button>`;
+    const bdays = anivByMonth[m.mi]||[];
+    return `<button class="${(list.length||bdays.length)?"has":""}" data-go="mes-${m.year}-${m.mi}">${MONTH_ABBR[m.mi]}</button>`;
   }).join("");
 
   const sub = `Atividades de ${MONTH_NAMES[months[0].mi].toLowerCase()}/${months[0].year} a ${MONTH_NAMES[months[11].mi].toLowerCase()}/${months[11].year}`;
@@ -159,9 +174,11 @@ function renderCampanhas(title, icon, text, al){
       const dy = (/(\d{1,2})\/(\d{1,2})/.exec(y.data)||[0,99])[1];
       return (+dx)-(+dy);
     });
+    const bdays = anivByMonth[m.mi]||[];
+    const total = list.length + bdays.length;
     body += `<div class="cal-month" id="mes-${m.year}-${m.mi}"><h3>${m.label}</h3>` +
-      (list.length?`<span class="count">${list.length} ${list.length>1?"atividades":"atividade"}</span>`:"") + `</div>`;
-    if(!list.length){
+      (total?`<span class="count">${total} ${total>1?"atividades":"atividade"}</span>`:"") + `</div>`;
+    if(!list.length && !bdays.length){
       body += `<div class="empty"><i class="ti ti-coffee"></i> Sem atividades programadas</div>`;
     } else {
       list.forEach(a=>{
@@ -178,6 +195,15 @@ function renderCampanhas(title, icon, text, al){
           <div class="body"><p class="ttl">${esc(a.titulo||"Atividade")}</p>
           <p class="meta">${resp}${more}</p></div></div>`;
       });
+      if(bdays.length){
+        body += `<div class="cal-aniv"><p class="cal-aniv-sep"><i class="ti ti-cake"></i> Aniversários</p><ul class="cal-aniv-list">`;
+        bdays.forEach(it=>{
+          const ic = it.cat==="casamento" ? "rings" : "cake";
+          const dd = String(it.d).padStart(2,"0"), mm = String(it.mo+1).padStart(2,"0");
+          body += `<li><span class="chip aniv-${it.cat}"><i class="ti ti-${ic}"></i></span><span class="d">${dd}/${mm}</span>${esc(it.name)}</li>`;
+        });
+        body += `</ul></div>`;
+      }
     }
   });
 
@@ -191,6 +217,8 @@ function renderCampanhas(title, icon, text, al){
        <span><span class="chip evento"><i class="ti ti-calendar-event"></i></span> Evento</span>
        <span><span class="chip reuniao"><i class="ti ti-users"></i></span> Reunião</span>
        <span><span class="chip comemorativa"><i class="ti ti-star"></i></span> Comemorativa / feriado</span>
+       <span><span class="chip aniv-nascimento"><i class="ti ti-cake"></i></span> Nascimento</span>
+       <span><span class="chip aniv-casamento"><i class="ti ti-rings"></i></span> Casamento</span>
      </div>
      <div class="cal-body">${body}</div>`;
   sec.querySelectorAll(".cal-nav button").forEach(b=>{
@@ -294,17 +322,26 @@ async function main(){
 
   fillChrome(kv, als, al);
 
-  const content = document.getElementById("content");
-  content.innerHTML = "";
+  // carrega todos os arquivos de seção
+  const loaded = [];
   for(const s of sections){
     const text = await fetchText(`content/${al}/${s.file}`);
-    if(text===null) continue; // arquivo ausente: pula a seção sem quebrar
-    if(s.mode==="banner"){ buildHero(text, al, kv); continue; }
+    if(text !== null) loaded.push({...s, text});
+  }
+
+  // extrai o texto de aniversários para injetar no calendário
+  const anivEntry = loaded.find(s => s.mode === "aniversarios");
+  const anivText = anivEntry ? anivEntry.text : null;
+
+  const content = document.getElementById("content");
+  content.innerHTML = "";
+  for(const s of loaded){
+    if(s.mode === "banner"){ buildHero(s.text, al, kv); continue; }
+    if(s.mode === "aniversarios") continue; // exibido dentro do calendário
     let node;
-    if(s.mode==="financeiro") node = renderFinanceiro(s.title, s.icon, text);
-    else if(s.mode==="aniversarios") node = renderAniversarios(s.title, s.icon, text);
-    else if(s.mode==="campanhas") node = renderCampanhas(s.title, s.icon, text, al);
-    else node = renderMarkdown(s.title, s.icon, text);
+    if(s.mode === "financeiro") node = renderFinanceiro(s.title, s.icon, s.text);
+    else if(s.mode === "campanhas") node = renderCampanhas(s.title, s.icon, s.text, al, anivText);
+    else node = renderMarkdown(s.title, s.icon, s.text);
     content.appendChild(node);
   }
 
