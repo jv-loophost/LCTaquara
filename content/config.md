@@ -21,8 +21,8 @@ estatuto_url: content/AL26-27/estatuto.pdf
 #
 #   modo = markdown      -> texto livre (negrito, listas, links, tabelas)
 #   modo = financeiro    -> mostra o PIX atrás de um botão
-#   modo = aniversarios  -> lista organizada por mês (dia/mês, sem ano)
-#   modo = campanhas     -> calendário leonístico (a seção principal)
+#   modo = aniversarios  -> lido pelo calendário e exibido mês a mês
+#   modo = campanhas     -> calendário leonístico (inclui aniversários automaticamente)
 #   modo = banner        -> banner rotativo de fotos (fica no topo)
 #
 # Para ADICIONAR uma seção nova: crie o arquivo .md na pasta do AL e
