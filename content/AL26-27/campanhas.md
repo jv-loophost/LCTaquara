@@ -17,21 +17,22 @@
 
 ## Julho 2026
 
-tipo: evento
-data: 01/07/2026
-hora: 20h
-titulo: Posse da diretoria 26/27
+tipo: reuniao
+data: 07/07/2026
+hora: 19h30
+titulo: Posse da diretoria AL 26/27
 responsavel: Diretoria
-detalhes: Local: sede do clube. Jantar de posse com transmissão do cargo. Traje passeio completo.
+detalhes: Local: Sociedade 5 de Maio. Jantar de posse com transmissão do cargo.
 link:
 
 tipo: reuniao
 data: 15/07/2026
 hora: 19h30
-titulo: Reunião de planejamento
-responsavel: Secretaria
-detalhes: Definição do calendário de campanhas do AL e divisão das comissões.
-link:
+Local: on-line
+titulo: Reunião de Diretoria
+responsavel: Presidente
+detalhes: Definição do calendário de campanhas, divisão das comissões e metas do AL.
+link: https://meet.google.com/bkv-vtzj-ght
 
 ## Agosto 2026
 
@@ -68,6 +69,15 @@ detalhes: Balanço da Campanha da Visão e prestação de contas do mês.
 link:
 
 ## Outubro 2026
+
+tipo: campanha
+data: 28/11/2026
+hora: 00h00
+titulo: Chá das Patronesses
+responsavel: CLa. Lígia
+detalhes: Vende-se em torno de 32 mesas ,cada mesa com 10 participantes onde a patronesse é que fica encarregada de vender os cartões paras convidadas além de ornamentar a mesa. O lions dispõe do lugar, mesas e toalhas. 
+Beneficiada Embaixada Feminina de Amor ao Hospital Bom Jesus e fundo para LCIF.
+link:
 
 ## Novembro 2026
 
