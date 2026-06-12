@@ -70,7 +70,6 @@
 13/07 | Vera e Renato Fagondes
 19/07 | Elenara e Mario Buchmann
 24/07 | Marli e Valter Suzin
-31/07 | Almensor F. Santos e Carol
 05/09 | Alessandra e Jonas Reis
 08/09 | Marilena e Paulo Streit
 19/09 | Laura e Diovani
