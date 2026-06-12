@@ -200,9 +200,9 @@ function renderCampanhas(title, icon, text, al, anivText){
       return (+dx)-(+dy);
     });
     const bdays = anivByMonth[m.mi]||[];
-    const total = list.length + bdays.length;
+    const count = list.length; // aniversários não entram na contagem
     body += `<div class="cal-month" id="mes-${m.year}-${m.mi}"><h3>${m.label}</h3>` +
-      (total?`<span class="count">${total} ${total>1?"atividades":"atividade"}</span>`:"") + `</div>`;
+      (count?`<span class="count">${count} ${count>1?"atividades":"atividade"}</span>`:"") + `</div>`;
     if(!list.length && !bdays.length){
       body += `<div class="empty"><i class="ti ti-coffee"></i> Sem atividades programadas</div>`;
     } else {
