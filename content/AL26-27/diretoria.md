@@ -1,13 +1,19 @@
-A diretoria do Ano Leonístico 2026/2027:
+A Diretoria do Ano Leonístico 2026/2027, conforme o **Art. 17 do Estatuto**:
 
-| Cargo | Nome | Contato |
-|-------|------|---------|
-| Presidente | João Vitor (exemplo) | presidente@lionstaquara.org.br |
-| 1º Vice-presidente | Nome do sócio | — |
-| Secretário(a) | Nome do sócio | secretaria@lionstaquara.org.br |
-| Tesoureiro(a) | Nome do sócio | tesouraria@lionstaquara.org.br |
-| Diretor(a) social | Nome do sócio | — |
-| Domador(a) | Nome do sócio | — |
-| Tesoureiro(a) de leão | Nome do sócio | — |
+| Cargo | Nome |
+|-------|------|
+| Presidente | CL Juliano Valentini |
+| 1º Vice-Presidente | CL Diovani Agusto Colombo |
+| 2º Vice-Presidente | CaL Alessandra Schunck |
+| 1º Secretário | CaL Suzana Hans |
+| 2º Secretário | CaL Angela Maria Boeira |
+| 1º Tesoureiro | CaL Edna Pereira dos Santos |
+| 2º Tesoureiro | CL Luciano Müller |
+| Diretor de Associados | CL Mario Buchmann |
+| Assessor de Serviços | CaL Alessandra Schunck |
+| Diretor de Comunicações de Marketing | CaL Laura Ostrowski Fontoura |
+| Coordenador de LCIF | CaL Laura Ostrowski Fontoura |
+| Coordenador de Programas | (a definir) |
+| Ex-Presidente Imediato | CaL Laura Ostrowski Fontoura |
 
-> Para editar: troque os nomes/contatos. Para adicionar um cargo, copie uma linha inteira (com as barras `|`) e cole abaixo.
+> A ordem e os cargos acima seguem o Art. 17 do Estatuto.
