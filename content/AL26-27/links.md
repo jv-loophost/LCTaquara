@@ -3,7 +3,7 @@
 - [Portal MyLion / Lion Portal](https://www.lionportal.org) — sistema oficial dos sócios
 - [Distrito LD-2](https://www.google.com/search?q=Distrito+LD-2+Lions) — *(substitua pelo link oficial do distrito)*
 - [Distrito Múltiplo LD](https://www.google.com/search?q=Distrito+Multiplo+LD+Lions) — *(substitua pelo link oficial)*
-- [Lions Clubs International (PT)](https://www.lionsclubs.org/pt)
+- [Lions Clubs International](https://www.lionsclubs.org/pt)
 
 **Como acessar o MyLion / Lion Portal:**
 

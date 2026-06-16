@@ -24,4 +24,4 @@ Um abraço fraterno a todos!
 **Nós servimos!**
 
 *Juliano Valentini*
-*Presidente AL 2026/2027*
+∴ *Presidente AL 2026/2027*
