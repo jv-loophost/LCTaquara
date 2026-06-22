@@ -383,4 +383,6 @@ async function main(){
   document.getElementById("modal").addEventListener("click", e=>{ if(e.target.id==="modal") closeModal(); });
   document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeModal(); });
 }
+const printBtn = document.getElementById("print-btn");
+if(printBtn) printBtn.addEventListener("click", ()=>window.print());
 main();
