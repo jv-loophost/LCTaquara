@@ -91,7 +91,7 @@ function renderPresidente(title, icon, text){
   if(lema) inner += `<p class="pres-lema"><i class="ti ti-quote"></i>${esc(lema)}</p>`;
   const letter = body.join("\n").trim();
   inner += window.marked ? marked.parse(letter) : esc(letter);
-  return sectionShell(title, icon, inner);
+  return sectionShell(title, icon, inner, "pres-section");
 }
 
 function renderFinanceiro(title, icon, text){

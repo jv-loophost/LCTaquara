@@ -245,15 +245,8 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
   .pc-motto{font-style:italic;font-size:12pt;color:#5a4500;margin:3mm 0 0}
 
   /* elementos só-de-tela: não imprimir */
-  .topbar,#hero-slot,.hero,.cal-nav,.modal,.al-area,.site-footer,
+  .topbar,#hero-slot,.hero,.cal-nav,.modal,.al-area,.site-header,.site-footer,
   .print-btn,.pix-btn,.copy{display:none !important}
-
-  /* cabeçalho do documento: emblema + nome do clube */
-  .site-header{border:0}
-  .site-header .wrap{padding:0 0 8pt}
-  .emblem{width:46px;height:46px}
-  .titles h1{font-size:18pt;color:#000}
-  .titles .city{font-size:10pt;color:#333}
 
   /* conteúdo em fluxo limpo, sem cards/sombras */
   main{max-width:none;margin:0;padding:0}
@@ -265,6 +258,8 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
   h2,h3{break-after:avoid;page-break-after:avoid}
   tr,.act,.empty,.cal-month,.cal-aniv,.bday-list li,.cal-aniv-list li,.pres-lema{
     break-inside:avoid;page-break-inside:avoid}
+  /* mantém a Palavra do Presidente inteira numa página (sem quebrar o fecho) */
+  .pres-section{break-inside:avoid;page-break-inside:avoid}
 
   /* tabela da diretoria: repete o cabeçalho a cada página */
   .prose table{font-size:9.5pt}
