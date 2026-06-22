@@ -355,6 +355,20 @@ async function main(){
 
   fillChrome(kv, als, al);
 
+  // capa exclusiva da versão impressa (logo + clube + AL)
+  const cover = document.getElementById("print-cover");
+  if(cover){
+    const cm = /AL(\d{2})-(\d{2})/.exec(al||"");
+    const alLong = cm ? `Ano Leonístico 20${cm[1]}/20${cm[2]}` : (al||"");
+    cover.innerHTML =
+      `<img class="pc-emblem" src="assets/lions-emblem.png" alt="Lions Clubs International">
+       <p class="pc-eyebrow">Lions Clubs International</p>
+       <h1 class="pc-club">${esc(kv.clube||"Lions Clube Taquara")}</h1>
+       ${kv.cidade?`<p class="pc-city">${esc(kv.cidade)}</p>`:""}
+       <p class="pc-al">${esc(alLong)}</p>
+       <p class="pc-motto">${esc(kv.lema||"Nós Servimos")}</p>`;
+  }
+
   // carrega todos os arquivos de seção
   const loaded = [];
   for(const s of sections){

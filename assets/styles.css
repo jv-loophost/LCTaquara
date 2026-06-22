@@ -221,6 +221,7 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
   display:inline-flex;align-items:center;gap:7px}
 .print-btn:hover{background:rgba(255,255,255,.1);color:#fff}
 .print-btn i{font-size:15px}
+#print-cover{display:none} /* capa: aparece só na versão impressa */
 
 /* ---------- impressão / PDF em A5 (booklet com margem para espiral) ---------- */
 @media print{
@@ -232,6 +233,16 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
   @page:right{margin-left:20mm;margin-right:12mm} /* páginas ímpares (frente) */
   @page:left{margin-left:12mm;margin-right:20mm}  /* páginas pares (verso) */
   body{background:#fff;color:#000;font-size:10.5pt;line-height:1.4}
+
+  /* capa (página 1, exclusiva da impressão) */
+  #print-cover{display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;min-height:180mm;break-after:page;page-break-after:always}
+  .pc-emblem{width:120px;height:120px;margin:0 0 10mm}
+  .pc-eyebrow{font-size:10pt;letter-spacing:.18em;text-transform:uppercase;color:#555;margin:0 0 4mm}
+  .pc-club{font-family:var(--font-display);font-weight:600;font-size:30pt;color:#0033A0;margin:0;line-height:1.1}
+  .pc-city{font-size:12pt;color:#333;margin:3mm 0 0}
+  .pc-al{font-family:var(--font-display);font-weight:600;font-size:16pt;color:#000;margin:14mm 0 0}
+  .pc-motto{font-style:italic;font-size:12pt;color:#5a4500;margin:3mm 0 0}
 
   /* elementos só-de-tela: não imprimir */
   .topbar,#hero-slot,.hero,.cal-nav,.modal,.al-area,.site-footer,
