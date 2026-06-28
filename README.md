@@ -95,6 +95,10 @@ aniversários nos meses correspondentes.
 
 1. Coloque as imagens dentro de `content/AL26-27/fotos/` (de preferência largas, ex.: 1600x640).
 2. Abra `content/AL26-27/fotos.md` e liste uma por linha: `arquivo | legenda`.
+3. (Opcional) Como o banner é largo e baixo, ele mostra só uma faixa da foto. Para
+   não cortar rostos, acrescente um 3º campo com o ponto focal, ex.:
+   `arquivo | legenda | center 20%` (sobe o corte) ou `center 60%` (desce). Sem o
+   campo, o padrão é o centro.
 
 As fotos passam automaticamente, em rotação, no banner do topo.
 

@@ -289,11 +289,14 @@ function buildHero(text, al, kv){
   const imgs = [];
   (text||"").split("\n").forEach(raw=>{ const t=raw.trim();
     if(t.startsWith("#")||t==="") return;
-    const p = t.split("|"); if(p[0].trim()) imgs.push({file:p[0].trim(), cap:(p[1]||"").trim()}); });
+    const p = t.split("|"); if(p[0].trim()) imgs.push({file:p[0].trim(), cap:(p[1]||"").trim(), pos:(p[2]||"").trim()}); });
   const hero = document.createElement("section");
   hero.className = "hero";
-  const slides = imgs.map((im,i)=>
-    `<div class="slide ${i===0?"on":""}" style="background-image:url('content/${al}/fotos/${encodeURIComponent(im.file)}')"></div>`).join("");
+  const slides = imgs.map((im,i)=>{
+    const pos = (im.pos||"").replace(/[^a-z0-9%.\s-]/gi,"");        // ponto focal opcional (ex.: "center 25%")
+    const posCss = pos ? `;background-position:${pos}` : "";        // sem valor, usa o padrão do CSS (center)
+    return `<div class="slide ${i===0?"on":""}" style="background-image:url('content/${al}/fotos/${encodeURIComponent(im.file)}')${posCss}"></div>`;
+  }).join("");
   const dots = imgs.map((_,i)=>`<button class="${i===0?"on":""}" aria-label="foto ${i+1}"></button>`).join("");
   hero.innerHTML = `${slides}<div class="scrim"></div>
     <div class="inner"><p class="eyebrow">${esc(kv.clube||"Lions Clube")}</p>
