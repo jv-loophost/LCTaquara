@@ -10,5 +10,5 @@
 #   center 60%  -> desce o corte (assunto na parte de baixo)
 
 foto-exemplo-1.jpg | Posse da nova diretoria | center 25%
-foto-exemplo-2.jpg | Campanha da Visão | center 20%
-foto-exemplo-3.jpg | Ação comunitária 2026 | center 55%
+foto-exemplo-2.jpg | Resultado da Pernada | center 20%
+foto-exemplo-3.jpg | Ação comunitária enchente RS | center 55%
