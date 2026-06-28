@@ -13,7 +13,7 @@ A Diretoria do Ano Leonístico 2026/2027, conforme o **Art. 17 do Estatuto**:
 | Assessor de Serviços | CaL Alessandra Schunck |
 | Diretor de Comunicações de Marketing | CaL Laura Ostrowski Fontoura |
 | Coordenador de LCIF | CaL Laura Ostrowski Fontoura |
-| Coordenador de Programas | (a definir) |
+| Coordenador de Programas | CaL Carla Volkart |
 | Ex-Presidente Imediato | CaL Laura Ostrowski Fontoura |
 
 > A ordem e os cargos acima seguem o Art. 17 do Estatuto.
