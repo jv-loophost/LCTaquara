@@ -77,6 +77,8 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
 .prose p{margin:.5em 0}
 .prose ul{margin:.4em 0;padding-left:1.2em}
 .prose li{margin:.25em 0}
+/* Comissões: muitas e com muitos nomes — mais respiro entre uma e outra */
+.sec-comissoes .prose li{margin:0 0 .7em}
 .prose table{border-collapse:collapse;width:100%;font-size:15px;margin:.3em 0}
 .prose th,.prose td{border:1px solid var(--line);padding:9px 12px;text-align:left;
   overflow-wrap:anywhere}

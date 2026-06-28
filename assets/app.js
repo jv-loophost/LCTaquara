@@ -390,6 +390,7 @@ async function main(){
     else if(s.mode === "financeiro") node = renderFinanceiro(s.title, s.icon, s.text);
     else if(s.mode === "campanhas") node = renderCampanhas(s.title, s.icon, s.text, al, anivText);
     else node = renderMarkdown(s.title, s.icon, s.text);
+    if(node) node.classList.add("sec-" + s.file.replace(/\.md$/,"").toLowerCase());
     content.appendChild(node);
   }
 
