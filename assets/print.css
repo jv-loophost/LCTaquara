@@ -1,0 +1,81 @@
+/* =========================================================================
+   Lions Clube Taquara — layout EXCLUSIVO de impressão / PDF (A5, booklet)
+   Vinculado no index.html com media="print" — não afeta a versão de tela.
+   As variáveis (--font-display, etc.) vêm do :root de styles.css.
+   ========================================================================= */
+
+/* ---------- página A5 com margem interna espelhada (espiral, frente-e-verso) ---------- */
+@page{ size:A5; margin:12mm 12mm 14mm 12mm; }
+@page:right{ margin-left:20mm; margin-right:12mm; } /* ímpares (frente) */
+@page:left { margin-left:12mm; margin-right:20mm; } /* pares (verso)   */
+
+body{ background:#fff; color:#000; font-size:10.5pt; line-height:1.4; }
+
+/* ---------- elementos só-de-tela: fora do PDF ---------- */
+.topbar,#hero-slot,.hero,.cal-nav,.modal,.al-area,.site-header,.site-footer,
+.print-btn,.pix-btn,.copy,.prose blockquote{ display:none !important; }
+
+/* ---------- capa (página 1) ---------- */
+#print-cover{ display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; min-height:180mm; break-after:page; page-break-after:always; }
+.pc-emblem{ width:120px; height:120px; margin:0 0 10mm; }
+.pc-eyebrow{ font-size:10pt; letter-spacing:.18em; text-transform:uppercase; color:#555; margin:0 0 4mm; }
+.pc-club{ font-family:var(--font-display); font-weight:600; font-size:30pt; color:#0033A0; margin:0; line-height:1.1; }
+.pc-city{ font-size:12pt; color:#333; margin:3mm 0 0; }
+.pc-al{ font-family:var(--font-display); font-weight:600; font-size:16pt; color:#000; margin:14mm 0 0; }
+.pc-motto{ font-style:italic; font-size:12pt; color:#5a4500; margin:3mm 0 0; }
+
+/* ---------- conteúdo em fluxo limpo, sem cards/sombras ---------- */
+main{ max-width:none; margin:0; padding:0; }
+.section{ background:none; border:0; box-shadow:none; border-radius:0; padding:0; margin:0 0 14pt; }
+.section > h2{ font-size:13.5pt; color:#0033A0; margin:0 0 6pt; }
+.section > h2 i{ background:none !important; color:#0033A0 !important; width:auto; height:auto; font-size:14pt; }
+
+/* =========================================================================
+   REGRA DE OURO DAS QUEBRAS
+   Um título (de seção, subtítulo ou mês) NUNCA fica sozinho no rodapé: ele
+   viaja sempre com o início do seu conteúdo. O conteúdo, esse sim, pode
+   quebrar livremente nas páginas seguintes (continuação sem título = ok).
+   ========================================================================= */
+.section > h2, h3,
+.cal-head, .cal-legend, .cal-month{
+  break-after:avoid; page-break-after:avoid;
+}
+
+/* unidades atômicas: não partir no meio */
+.act, .empty, .cal-aniv, .bday-list li, .cal-aniv-list li, .pres-lema,
+tr, .prose li, .cal-head, .cal-legend{
+  break-inside:avoid; page-break-inside:avoid;
+}
+
+/* parágrafos: nunca deixar 1 linha órfã/viúva isolada */
+p{ orphans:3; widows:3; }
+
+/* a Palavra do Presidente cabe inteira numa página (mensagem + fecho juntos) */
+.pres-section{ break-inside:avoid; page-break-inside:avoid; }
+
+/* ---------- tabela (diretoria): repete o cabeçalho a cada página ---------- */
+.prose table{ font-size:9.5pt; }
+.prose thead{ display:table-header-group; }
+.prose th{ background:#eef2fb !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+/* ---------- PIX visível no booklet (sem o botão) ---------- */
+.pix-box{ display:block !important; background:none; padding:0; margin-top:6pt; }
+.pix-key{ font-size:11pt; }
+
+/* ---------- calendário: neutralizar fundos pesados (economia de tinta) ---------- */
+.cal{ box-shadow:none; }
+.cal-head{ background:none !important; color:#000; border-bottom:2pt solid #0033A0; padding:0 0 6pt; }
+.cal-head h2, .cal-head h2 i{ color:#0033A0; font-size:13.5pt; }
+.cal-head p{ color:#333; }
+.cal-legend{ background:none; padding:6pt 0; gap:8px 16px; }
+.cal-body{ padding:0; }
+.cal-month{ background:none; border-left:0; border-bottom:1pt solid #999; border-radius:0;
+  padding:4pt 0; margin:12pt 0 6pt; }
+.cal-month h3{ color:#000; }
+.cal-month .count{ background:none; color:#555; padding:0; }
+.act{ border:1pt solid #ccc; border-radius:0; padding:6pt 8pt; margin-bottom:5pt; }
+.act:hover{ background:none; }
+.chip{ background:none !important; color:#000 !important; border:1pt solid #999; width:18px; height:18px; }
+
+a{ color:#000; text-decoration:none; }
