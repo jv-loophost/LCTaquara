@@ -31,11 +31,12 @@ main{ max-width:none; margin:0; padding:0; }
 .section > h2{ font-size:13.5pt; color:#0033A0; margin:0 0 6pt; }
 .section > h2 i{ background:none !important; color:#0033A0 !important; width:auto; height:auto; font-size:14pt; }
 
-/* Comissões: lista longa, com muitos nomes que quebram em várias linhas.
-   Mais respiro entre uma comissão e outra para não ficarem acavaladas. */
-.sec-comissoes .prose ul{ margin:0; }
-.sec-comissoes .prose li{ margin:0 0 8pt; line-height:1.35; }
-.sec-comissoes .prose li:last-child{ margin-bottom:0; }
+/* Comissões: cada uma numa caixa (como os eventos), para separar bem.
+   As caixas podem fluir entre páginas; cada caixa, porém, não se parte. */
+.sec-comissoes .prose ul{ list-style:none; padding:0; margin:0; }
+.sec-comissoes .prose li{ border:1pt solid #bbb; border-radius:6pt;
+  padding:6pt 9pt; margin:0 0 6pt; line-height:1.35; }
+.sec-comissoes .prose li strong:first-child{ color:#0033A0; }
 
 /* =========================================================================
    REGRA DE OURO DAS QUEBRAS

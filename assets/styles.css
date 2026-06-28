@@ -77,8 +77,12 @@ main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
 .prose p{margin:.5em 0}
 .prose ul{margin:.4em 0;padding-left:1.2em}
 .prose li{margin:.25em 0}
-/* Comissões: muitas e com muitos nomes — mais respiro entre uma e outra */
-.sec-comissoes .prose li{margin:0 0 .7em}
+/* Comissões: muitas e com muitos nomes — cada uma numa caixa, como os eventos */
+.sec-comissoes .prose ul{list-style:none;padding-left:0;margin:.5em 0}
+.sec-comissoes .prose li{border:1px solid var(--line);border-radius:12px;
+  padding:12px 16px;margin:0 0 10px}
+.sec-comissoes .prose li:last-child{margin-bottom:0}
+.sec-comissoes .prose li strong:first-child{color:var(--lions-blue)}
 .prose table{border-collapse:collapse;width:100%;font-size:15px;margin:.3em 0}
 .prose th,.prose td{border:1px solid var(--line);padding:9px 12px;text-align:left;
   overflow-wrap:anywhere}
