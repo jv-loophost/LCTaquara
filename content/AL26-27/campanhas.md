@@ -125,6 +125,14 @@ responsavel: CLa. Lígia
 detalhes: Vende-se em torno de 32 mesas, cada mesa com 10 participantes, onde a patronesse é que fica encarregada de vender os cartões para as convidadas, além de ornamentar a mesa. O Lions dispõe do lugar, mesas e toalhas. Beneficiada: Embaixada Feminina de Amor ao Hospital Bom Jesus e fundo para LCIF.
 link:
 
+tipo: campanha
+data: 08/10/2026
+titulo: Semana de Serviço — Visão (8 a 18/10)
+local: 
+responsavel: 
+detalhes: Semana mundial de serviço em prol da visão: Dia Mundial da Visão (8/out) e Dia Internacional da Bengala Branca (15/out) — testes oftalmológicos, reciclagem de óculos e prevenção da cegueira evitável.
+link: https://www.lionsclubs.org/pt/member-resource-center/service/global-causes-initiatives/weeks-of-service
+
 ## Novembro 2026
 
 tipo: reuniao
@@ -177,6 +185,14 @@ link:
 ## Janeiro 2027
 
 ## Fevereiro 2027
+
+tipo: campanha
+data: 13/02/2027
+titulo: Semana de Serviço — Juventude (13 a 21/02)
+local: 
+responsavel: 
+detalhes: Semana de serviço dedicada a crianças e jovens: Dia Internacional do Câncer Infantil (15/fev), exames KidSight, combate à fome infantil, acampamentos para diabéticos e intercâmbio juvenil.
+link: https://www.lionsclubs.org/pt/member-resource-center/service/global-causes-initiatives/weeks-of-service
 
 ## Março 2027
 
@@ -235,6 +251,14 @@ hora: 20h
 responsavel: CLa. Alessandra Schunck
 detalhes: data a confirmar
 link:
+
+tipo: campanha
+data: 29/05/2027
+titulo: Semana de Serviço — Meio Ambiente (29/05 a 6/06)
+local: 
+responsavel: 
+detalhes: Semana de serviço pelo meio ambiente: Dia Mundial do Meio Ambiente (5/jun) — ações por uma comunidade mais saudável e sustentável e mobilização pela causa ambiental.
+link: https://www.lionsclubs.org/pt/member-resource-center/service/global-causes-initiatives/weeks-of-service
 
 ## Junho 2027
 
