@@ -165,8 +165,8 @@ link:
 ## Dezembro 2026
 
 tipo: evento
-data: 01/12/2026
-hora: 19h
+data: 09/12/2026 (quarta-feira)
+hora: 18h30
 titulo: Confraternização de fim de ano
 local: -- a definir --
 responsavel: Diretoria

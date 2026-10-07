@@ -38,7 +38,7 @@
 23/09 | Marilda Valerio Bangel
 24/09 | Marlene Soder Ressler
 27/09 | Elena Gomes dos Santos
-10/10 | Marcos Antonio De Souza Martins
+28/09 | Marcos Antonio De Souza Martins
 11/10 | Carla Volkart
 14/10 | Maria Cristina Timmem Muller
 16/10 | Thiago Feltes Maques
